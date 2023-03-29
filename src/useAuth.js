@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("https://logimusic-server.herokuapp.com/login", {
+      .post("https://vivekfy2.onrender.com/login", {
         code,
       })
       .then((res) => {
@@ -26,7 +26,7 @@ export default function useAuth(code) {
     if (!refreshToken || !expiresIn) return;
     const interval = setInterval(() => {
       axios
-        .post("https://logimusic-server.herokuapp.com/refresh", {
+        .post("https://vivekfy2.onrender.com/refresh", {
           refreshToken,
         })
         .then((res) => {
