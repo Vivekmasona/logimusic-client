@@ -31,7 +31,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return;
 
     axios
-      .get("https://logimusic-server.herokuapp.com/lyrics", {
+      .get("https://vivekfy2.onrender.com/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
@@ -81,7 +81,7 @@ export default function Dashboard({ code }) {
     const song = { title: track.title, artist: track.artist };
 
     const { data } = await axios.post(
-      "https://logimusic-server.herokuapp.com/song",
+      "https://vivekfy2.onrender.com/song",
       {
         song,
       }
